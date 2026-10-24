@@ -1,0 +1,40 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "ip-checker",
+  "title": "IP Checker",
+  "description": "Check public IP address and network details from ipinfo.io",
+  "icon": "command-icon.png",
+  "author": "elias",
+  "categories": [
+    "Developer Tools",
+    "Data"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "check-ip-info",
+      "title": "Check IP Info",
+      "description": "Check current IP and network info from ipinfo.io",
+      "icon": "command-icon.png",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.83.0",
+    "@raycast/utils": "^1.17.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "22.19.17",
+    "@types/react": "19.0.10",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build -e dist -o dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint"
+  }
+}
