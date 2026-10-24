@@ -4,16 +4,16 @@ Eine Raycast Extension, die alle lokalen und öffentlichen IP- sowie Geolocation
 
 ## Reihenfolge & Angezeigte Daten:
 
-1. **Public IPv4**: Öffentliche IPv4-Adresse (Icon: 🌐 `Icon.Globe`)
+1. **Public IPv4**: Öffentliche IPv4-Adresse (Icon: 🌐 `Icon.Globe`, mit Länderflagge als Zubehör)
 2. **Public IPv6**: Öffentliche IPv6-Adresse, falls vorhanden (Icon: 🌐 `Icon.Globe`)
-3. **Local IPv4**: Lokale IPv4-Adresse im Heimnetzwerk/WLAN (Icon: ℹ️ `Icon.Info`)
-4. **Local IPv6**: Lokale IPv6-Adresse / Link-Local (Icon: 🎯 `Icon.BullsEye`)
-5. **Location**: `Land, Bundesland/Region, Stadt, ZIP: Postleitzahl` (Icon: 🗺️ `Icon.Map`)
-6. **GeoCoordinates**: `Breitengrad , Längengrad` (Icon: 📍 `Icon.Geopin`)
-7. **Timezone**: Zeitzone z. B. `Europe/Berlin` (Icon: 🕒 `Icon.Clock`)
-8. **AS**: Autonomes System Identifier z. B. `AS9009` (Icon: ⛶ `Icon.Crop`)
-9. **ISP**: Internet Service Provider z. B. `M247 Europe SRL` (Icon: 📡 `Icon.Livestream`)
-10. **Organization**: Organisation / Hosting-Provider (Icon: 🏢 `Icon.Building`)
+3. **Location**: `Land, Bundesland/Region, Stadt, ZIP: Postleitzahl` (Icon: 🇩🇪 Länderflagge)
+4. **GeoCoordinates**: `Breitengrad , Längengrad` (Icon: 📍 `Icon.Geopin`)
+5. **Timezone**: Zeitzone z. B. `Europe/Berlin` (Icon: 🕒 `Icon.Clock`)
+6. **AS**: Autonomes System Identifier z. B. `AS9009` (Icon: ⛶ `Icon.Crop`)
+7. **ISP**: Internet Service Provider z. B. `M247 Europe SRL` (Icon: 📡 `Icon.Livestream`)
+8. **Organization**: Organisation / Hosting-Provider (Icon: 🏢 `Icon.Building`)
+9. **Local IPv4**: Lokale IPv4-Adresse im Heimnetzwerk/WLAN (Icon: ℹ️ `Icon.Info`)
+10. **Local IPv6**: Lokale IPv6-Adresse / Link-Local (Icon: 🎯 `Icon.BullsEye`)
 
 ## Cmd+K Menü:
 - **`Enter`**: Kopiert den jeweiligen Wert des gewählten Eintrags (`Copy Public IPv4`, `Copy Local IPv4`, `Copy Location`, etc.)

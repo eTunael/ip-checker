@@ -350,7 +350,7 @@ export default function Command() {
     loadData();
   }, []);
 
-  // Requested order: ipv4, ipv6, local ip4, local ip6, location, geocoordinates, timezone, as, isp, organization
+  // Requested order: ipv4, ipv6, location, geocoordinates, timezone, as, isp, organization, local ip4, local ip6
   const items = useMemo<IpInfoRow[]>(() => {
     if (!data) return [];
 
@@ -380,29 +380,7 @@ export default function Command() {
       });
     }
 
-    // 3. Local IPv4
-    if (data.localIpv4) {
-      rows.push({
-        key: "localIpv4",
-        label: "Local IPv4",
-        copyLabel: "Local IPv4",
-        value: data.localIpv4,
-        icon: Icon.Info,
-      });
-    }
-
-    // 4. Local IPv6
-    if (data.localIpv6) {
-      rows.push({
-        key: "localIpv6",
-        label: "Local IPv6",
-        copyLabel: "Local IPv6",
-        value: data.localIpv6,
-        icon: Icon.BullsEye,
-      });
-    }
-
-    // 5. Location (with flag emoji)
+    // 3. Location (with flag emoji)
     if (data.location) {
       const locationDisplay = flag ? `${flag} ${data.location}` : data.location;
       rows.push({
@@ -415,7 +393,7 @@ export default function Command() {
       });
     }
 
-    // 6. GeoCoordinates
+    // 4. GeoCoordinates
     if (data.coordinates) {
       const mapsUrl =
         data.lat !== undefined && data.lon !== undefined
@@ -432,7 +410,7 @@ export default function Command() {
       });
     }
 
-    // 7. Timezone
+    // 5. Timezone
     if (data.timezone) {
       rows.push({
         key: "timezone",
@@ -443,7 +421,7 @@ export default function Command() {
       });
     }
 
-    // 8. AS
+    // 6. AS
     if (data.as) {
       rows.push({
         key: "as",
@@ -454,7 +432,7 @@ export default function Command() {
       });
     }
 
-    // 9. ISP
+    // 7. ISP
     if (data.isp) {
       rows.push({
         key: "isp",
@@ -465,7 +443,7 @@ export default function Command() {
       });
     }
 
-    // 10. Organization
+    // 8. Organization
     if (data.organization) {
       rows.push({
         key: "organization",
@@ -473,6 +451,28 @@ export default function Command() {
         copyLabel: "Organization",
         value: data.organization,
         icon: Icon.Building,
+      });
+    }
+
+    // 9. Local IPv4
+    if (data.localIpv4) {
+      rows.push({
+        key: "localIpv4",
+        label: "Local IPv4",
+        copyLabel: "Local IPv4",
+        value: data.localIpv4,
+        icon: Icon.Info,
+      });
+    }
+
+    // 10. Local IPv6
+    if (data.localIpv6) {
+      rows.push({
+        key: "localIpv6",
+        label: "Local IPv6",
+        copyLabel: "Local IPv6",
+        value: data.localIpv6,
+        icon: Icon.BullsEye,
       });
     }
 
